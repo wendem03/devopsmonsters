@@ -1,0 +1,82 @@
+* {
+	outline: none;
+	box-sizing: border-box;
+}
+body {
+	font-family: "BebasNeue Regular";
+	overflow-x:hidden;
+	margin: 0;
+	&.fixed {
+		overflow:hidden;
+	}
+}
+input {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 21px;
+	color: #4f4f4f;
+	appearance:none;
+	&:placeholder {
+		color: #E0E0E0;
+	}
+}
+
+button {
+	cursor: pointer;
+}
+
+.container {
+	width: 100%;
+	max-width: 1290px;
+	margin: 0 auto;
+	@media all and (max-width: $widthxl) {
+		max-width: calc(100% - 30px);
+	}
+
+}
+.tablet-class {
+	display: none;
+	@media all and (max-width: $widthmd) {
+		display: block;
+		width: 100%;
+	}
+}
+.mobile-class {
+	display: none;
+	@media all and (max-width: $widthsm) {
+		display: block;
+		width: 100%;
+	}
+}
+
+.wrapper {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	&__line {
+		left: 50%;
+		z-index: -1;
+		transform: translateX(-50%);
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		max-width: 1290px;
+		margin: 0 auto;
+		display: flex;
+		align-items: stretch;
+		justify-content: space-between;
+	}
+	.line {
+		width: 1px;
+		background: rgba(0, 0, 0, 0.05);
+	}
+	@media all and (max-width: $widthxl) {
+		&__line {
+			max-width: calc(100% - 30px);
+		}
+	}
+}
+
+.red {
+	color: $red;
+}
