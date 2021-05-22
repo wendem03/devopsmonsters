@@ -620,6 +620,12 @@
       bottom: 0;
       height: 1px;
     }
+    @media all and (max-width: $widthlg) {
+      padding-bottom: 50px;
+     &:before {
+       width: calc((100%/6) * 2);
+     }
+    }
     @media all and (max-width: $widthmd) {
       flex-direction: column;
       align-items: flex-start;
@@ -650,10 +656,15 @@
       width: 350px;
       height: 200px;
     }
+    @media all and (max-width: $widthlg) {
+      font-size: 45px;
+      line-height: 45px;
+    }
     @media all and (max-width: $widthmd) {
       padding-bottom: 50px;
       padding-left: 0;
       width: 100%;
+
       &:before {
         top: -50%;
         left: 50px;
@@ -713,11 +724,24 @@
 
 .testimo-nials {
   padding:100px 0;
+  @media all and (max-width: $widthlg) {
+    padding-top: 0;
+  }
 
   &__wrapper {
     position: relative;
     padding-left: calc(100%/6);
     padding-right: calc(100%/6);
+    @media all and (max-width: $widthlg) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-start;
+      width: 100%;
+      padding-bottom: 100px;
+      padding-right: 0;
+      padding-left: 0;
+    }
   }
   &__title {
     position: absolute;
@@ -738,12 +762,36 @@
       height: 2px;
       background: $red;
     }
+    @media all and (max-width: $widthlg) {
+      position: relative;
+      padding-bottom: 27px;
+      font-size: 45px;
+      line-height: 45px;
+      &:before {
+        bottom: 45px;
+        left: 23px;
+      }
+      &:after {
+        content: '';
+        width: 300px;
+        height: 113px;
+        background: url("../img/testimonials.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        z-index: -1;
+        right: 40px;
+        bottom: 15px;
+      }
+    }
   }
 }
 
 .testimo-slider {
   overflow: initial;
   position: relative;
+  width: 100%;
   &:before {
     content: '';
     width: 562px;
@@ -756,6 +804,11 @@
     right: -153px;
     bottom: 15px;
   }
+  @media all and (max-width: $widthlg) {
+    &:before {
+      display: none;
+    }
+  }
 }
 .testimo-slider-prev {
   left: calc((100%/4) * -1);
@@ -767,6 +820,11 @@
   background:$red;
   right: calc((100%/4) * -1);
   transition: .3s linear;
+  @media all and (max-width: $widthlg) {
+    right: initial;
+    left: 0;
+    bottom: -100px;
+  }
   &:hover {
     background: $redhover;
   }
@@ -807,6 +865,12 @@
   background:$red;
   right: calc((100%/4) * -1);
   transition: .3s linear;
+  @media all and (max-width: $widthlg) {
+    right: 0;
+    top: initial;
+    left: initial;
+    bottom: -100px;
+  }
   &:hover {
     background: $redhover;
   }
@@ -914,6 +978,9 @@
       background-repeat: no-repeat;
       background-size: contain;
       z-index: -1;
+      @media all and (max-width: $widthmd) {
+        width: 200px;
+      }
     }
     strong {
       font-size: 45px;
@@ -985,6 +1052,9 @@
       position: absolute;
       top: -50%;
       left: 0;
+      @media all and (max-width: $widthmd) {
+        width: 300px;
+      }
     }
     strong {
       width: calc((100%/6) * 2);
@@ -1015,6 +1085,17 @@
     display: flex;
     align-items: stretch;
     justify-content: space-between;
+    @media all and (max-width: $widthmd) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+  &__mobile-text {
+    display: none;
+    @media all and (max-width: $widthmd) {
+      display: block;
+    }
   }
   &__col {
     width: calc(100%/3);
@@ -1024,7 +1105,31 @@
       justify-content: flex-start;
       .about-us-item {
         align-items: flex-end;
+        @media all and (max-width: $widthmd) {
+          flex-direction: row-reverse;
+          align-items: flex-start;
+          &__img {
+            margin-right: 0;
+            margin-left: 10px;
+          }
+          &__cont {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-start;
+            strong {
+
+            }
+            p {
+
+            }
+          }
+        }
       }
+    }
+    @media all and (max-width: $widthmd) {
+      width: 100%;
+      margin-bottom: 30px;
     }
     & > p {
       font-size: 18px;
@@ -1035,6 +1140,9 @@
       letter-spacing: 0.05em;
       margin: 0;
       margin-top: 54px;
+      @media all and (max-width: $widthmd) {
+        display: none;
+      }
     }
   }
 }
@@ -1043,6 +1151,9 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  @media all and (max-width: $widthmd) {
+    width: 100%;
+  }
   &__img {
     min-width: 50%;
     height: 214px;
@@ -1052,6 +1163,11 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+    @media all and (max-width: $widthmd) {
+      width: 200px;
+      height: 200px;
+      min-width: initial;
     }
   }
   &__cont {
@@ -1078,11 +1194,19 @@
     align-items: stretch;
     justify-content: flex-start;
     width: 100%;
+    @media all and (max-width: $widthmd) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
   }
   &__left {
     background: $red;
     padding: 50px;
     width: calc((100%/6) * 4);
+    @media all and (max-width: $widthmd) {
+      width: 100%;
+    }
   }
   &__title {
     font-size: 45px;
@@ -1133,6 +1257,9 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+    }
+    @media all and (max-width: $widthmd) {
+      width: 100%;
     }
   }
   &__right-text {

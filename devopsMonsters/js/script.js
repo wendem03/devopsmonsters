@@ -30,10 +30,16 @@ jQuery(document).ready(function($) {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
-        pagination: {
-            el: ".swiper-pagination",
-        },
+
         mousewheel: true,
         keyboard: true,
+        breakpoints: {
+            // when window width is >= 640px
+            1201: {
+                pagination: {
+                    el: ".swiper-pagination",
+                },
+            }
+        }
     });
 });
