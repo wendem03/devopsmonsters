@@ -42,4 +42,16 @@ jQuery(document).ready(function($) {
             }
         }
     });
+    $(document).on('click', '.js-burger-menu-block-btn', function (e){
+       e.preventDefault();
+       $('.js-burger-menu-block').addClass('js-active');
+    });
+
+    $(document).on('click', '.js-burger-menu-block-exit', function (e){
+        e.preventDefault();
+        $('.js-burger-menu-block').removeClass('js-active');
+    });
+
+
+
 });
