@@ -72,6 +72,9 @@
           display: none;
         }
         padding-right: 0;
+        &:first-child {
+          text-decoration: underline;
+        }
         &.burger-menu {
           display: block;
           margin-left: 10px;

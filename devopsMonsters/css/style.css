@@ -2250,6 +2250,10 @@ button {
     display: none;
   }
 
+  .header__right > a:first-child {
+    text-decoration: underline;
+  }
+
   .header__right > a.burger-menu {
     display: block;
     margin-left: 10px;
@@ -2383,7 +2387,7 @@ button {
   }
 
   .one-block-home-header__btn a.btn-red-border {
-    padding: 10px 15px;
+    padding: 11px 15px;
   }
 
   .one-block-home-video .block-video {
