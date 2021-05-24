@@ -1,0 +1,197 @@
+.technologies-page {
+  margin-top: 197px;
+  padding-bottom: 200px;
+  @media all and (max-width: $widthlg) {
+    margin-top: 50px;
+    padding-bottom: 100px;
+  }
+  @media all and (max-width: $widthsm) {
+    margin-top: 40px;
+    padding-bottom: 50px;
+  }
+  &__header {
+    position: relative;
+    &:before {
+      z-index: -1;
+      content: '';
+      background: url("../img/technologies-page.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      position: absolute;
+      width: 100%;
+      max-width: 1105px;
+      height: 218px;
+      left: -69px;
+      top: -125px;
+    }
+    @media all and (max-width: 1500px) {
+      padding-left: 70px;
+      &:before {
+        left: 0;
+      }
+    }
+    @media all and (max-width: $widthlg) {
+      padding-left: 30px;
+      &:before {
+        max-width: 50%;
+      }
+    }
+    @media all and (max-width: $widthsm) {
+      &:before {
+        max-width: 90%;
+        top: -90px;
+      }
+    }
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 65px;
+    line-height: 49px;
+    color: $black;
+    font-family: $fontBold;
+    @media all and (max-width: $widthmd) {
+      font-size: 45px;
+      line-height: 20px;
+    }
+    @media all and (max-width: $widthsm) {
+      font-size: 30px;
+      line-height: 20px;
+    }
+  }
+  &__subtitle {
+    color: $red;
+    font-size: 40px;
+    padding-top: 20px;
+    line-height: 49px;
+    @media all and (max-width: $widthmd) {
+      font-size: 30px;
+      line-height: 20px;
+    }
+    @media all and (max-width: $widthsm) {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    &:before {
+      content: '';
+      width: calc(100%/6);
+      height: 211px;
+      position: absolute;
+      right: 0;
+      bottom: -100px;
+      background: $red;
+    }
+    &:after {
+      content: '';
+      width: 74px;
+      height: 74px;
+      position: absolute;
+      right: -74px;
+      bottom: 111px;
+      background: $red;
+    }
+    @media all and (max-width: 1500px) {
+      &:after {
+        display: none;
+      }
+    }
+    @media all and (max-width: $widthlg) {
+      flex-wrap: wrap;
+      &:before {
+        height: 150px;
+        bottom: 0;
+      }
+    }
+    @media all and (max-width: $widthsm) {
+      &:before {
+        display: none;
+      }
+    }
+  }
+  &__col {
+    padding-top: 95px;
+    width: calc(100%/6);
+    &:nth-child(even) {
+      padding-top: 180px;
+    }
+    .technologies-page-item {
+      &:first-child {
+        padding-top: 0;
+      }
+    }
+    @media all and (max-width: $widthlg) {
+      width: calc(100%/3);
+      padding-top: 50px;
+      &:nth-child(even) {
+        padding-top: 100px;
+      }
+    }
+    @media all and (max-width: $widthsm) {
+      padding-top: 50px;
+      width: 50%;
+      &:nth-child(even) {
+        padding-top: 80px;
+      }
+    }
+  }
+}
+
+.technologies-page-item {
+  padding-top: 130px;
+  @media all and (max-width: $widthsm) {
+    padding-top: 70px;
+  }
+  &__title {
+    font-size: 30px;
+    line-height: 30px;
+    font-family: $fontBold;
+    color: $black;
+    position: relative;
+    &:before {
+      width: 16px;
+      height: 16px;
+      background:$red;
+      position: absolute;
+      left: 0;
+      top: -31px;
+      content: '';
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 15px;
+    span {
+      font-size: 24px;
+      line-height: 25px;
+      color: $grey;
+      letter-spacing: 0.05em;
+
+    }
+  }
+  @media all and (max-width: $widthsm) {
+    &__title {
+      font-size: 18px;
+      line-height: 100%;
+      &:before {
+        width: 10px;
+        height: 10px;
+      }
+    }
+    &__list {
+      span {
+        font-size: 14px;
+        line-height: 15px;
+        letter-spacing: 0.05em;
+      }
+    }
+  }
+}

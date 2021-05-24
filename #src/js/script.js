@@ -22,9 +22,43 @@ jQuery(document).ready(function($) {
     window.addEventListener('resize', () => {
         document.documentElement.style.setProperty('--vh', `${vh}px`);
     });
+
+    AOS.init({
+        once:true,
+        anchorPlacement: 'top-bottom',
+    });
+
+    var scroll = new SmoothScroll({
+        // Р’СЂРµРјСЏ СЃРєСЂРѕР»Р»Р° 400 = 0.4 СЃРµРєСѓРЅРґС‹
+        animationTime: 1400,
+        // Р Р°Р·РјРµСЂ С€Р°РіР° РІ РїРёРєСЃРµР»СЏС…
+        stepSize: 75,
+
+        // Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё:
+
+        // РЈСЃРєРѕСЂРµРЅРёРµ
+        accelerationDelta: 30,
+        // РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ СѓСЃРєРѕСЂРµРЅРёРµ
+        accelerationMax: 2,
+
+        // РџРѕРґРґРµСЂР¶РєР° РєР»Р°РІРёР°С‚СѓСЂС‹
+        keyboardSupport: true,
+        // РЁР°Рі СЃРєСЂРѕР»Р»Р° СЃС‚СЂРµР»РєР°РјРё РЅР° РєР»Р°РІРёР°С‚СѓСЂРµ РІ РїРёРєСЃРµР»СЏС…
+        arrowScroll: 50,
+
+        // Pulse (less tweakable)
+        // ratio of "tail" to "acceleration"
+        pulseAlgorithm: true,
+        pulseScale: 4,
+        pulseNormalize: 1,
+
+        // РџРѕРґРґРµСЂР¶РєР° С‚Р°С‡РїР°РґР°
+        touchpadSupport: true,
+    });
+
+
     const bgoverley = $('.bg-overley');
     var swiper = new Swiper(".testimo-slider", {
-        cssMode: true,
         loop:true,
         navigation: {
             nextEl: ".swiper-button-next",
